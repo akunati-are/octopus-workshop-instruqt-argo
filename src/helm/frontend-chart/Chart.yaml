@@ -3,4 +3,4 @@ name: demo-frontend
 description: A Helm chart for deploying the demo Frontend
 type: application
 version: 0.1.0
-appVersion: "#{Octopus.Release.Number}"
+appVersion: 25.1.1
