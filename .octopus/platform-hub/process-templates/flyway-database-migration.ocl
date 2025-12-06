@@ -17,6 +17,30 @@ parameter "parameter.database.package" {
     label = "Database Package"
 }
 
+parameter "parameter.database.name" {
+    display_settings = {
+        Octopus.ControlType = "SingleLineText"
+    }
+    help_text = "The name of the database you want to migrate"
+    label = "Database Name"
+}
+
+parameter "parameter.database.user" {
+    display_settings = {
+        Octopus.ControlType = "SingleLineText"
+    }
+    help_text = "User of database connection string"
+    label = "Database User"
+}
+
+parameter "parameter.database.password" {
+    display_settings = {
+        Octopus.ControlType = "Sensitive"
+    }
+    help_text = "Password of database service "
+    label = "Database Password"
+}
+
 step "flyway-database-migrations" {
     name = "Flyway Database Migrations"
 
