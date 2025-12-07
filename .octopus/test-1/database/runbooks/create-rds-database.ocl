@@ -52,14 +52,14 @@ process {
                     # Retrieve Terraform outputs from previous step
                     $instanceId = $OctopusParameters["Octopus.Action[Apply a Terraform template].Output.TerraformValueOutputs[instance_identifier]"]
                     $password   = $OctopusParameters["Octopus.Action[Apply a Terraform template].Output.TerraformValueOutputs[password]"]
-                    $host       = $OctopusParameters["Octopus.Action[Apply a Terraform template].Output.TerraformValueOutputs[rds_host]"]
+                    $sqlhost       = $OctopusParameters["Octopus.Action[Apply a Terraform template].Output.TerraformValueOutputs[rds_host]"]
                     $port       = $OctopusParameters["Octopus.Action[Apply a Terraform template].Output.TerraformValueOutputs[rds_port]"]
                     $username   = $OctopusParameters["Octopus.Action[Apply a Terraform template].Output.TerraformValueOutputs[username]"]
                     
                     Write-Highlight "=== RDS SQL Server Deployment Output ==="
                     
                     Write-Highlight "Instance Identifier: $instanceId"
-                    Write-Highlight "Host:               $host"
+                    Write-Highlight "Host:               $sqlhost"
                     Write-Highlight "Port:               $port"
                     Write-Highlight "Username:           $username"
                     Write-Highlight "Password:           $password"
