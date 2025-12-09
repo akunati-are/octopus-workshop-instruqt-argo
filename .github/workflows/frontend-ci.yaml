@@ -30,8 +30,8 @@ jobs:
       # Compute GHCR namespace and repo correctly
       - name: Compute GHCR namespace + repo path
         run: |
-          OWNER="${GITHUB_REPOSITORY_OWNER,,}"    # lowercase owner
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"     # everything after owner/
+          OWNER="${GITHUB_REPOSITORY_OWNER,,}"
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
           echo "GHCR_OWNER=$OWNER" >> $GITHUB_ENV
           echo "GHCR_REPO=$REPO_NAME" >> $GITHUB_ENV
 
@@ -54,5 +54,4 @@ jobs:
           provenance: false
           sbom: false
           tags: |
-            ghcr.io/${{ env.GHCR_OWNER }}/${{ env.GHCR_REPO }}/${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
-            ghcr.io/${{ env.GHCR_OWNER }}/${{ env.GHCR_REPO }}/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/${{ env.GHCR_OWNER }}/${{ env.GHCR_REPO }}/sample.frontend:${{ env.RELEASE_VERSION }}
