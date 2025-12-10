@@ -4,7 +4,7 @@ This repository contains the example application used throughout the Octopus Dep
 
 It includes :
 
-- A **sample database project** for demonstrating packaging and deploying schema changes.
+- A **Sample database project** for demonstrating packaging and deploying schema changes.
 - A **frontend application** used to show how application components can be deployed and managed with ArgoCD.
 
 The purpose of this repo is to provide simple, consistent artifacts that participants use while learning Octopus concepts such as environments, releases, automation steps, and integrating external deployment tools.
